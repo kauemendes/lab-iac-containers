@@ -41,14 +41,15 @@ resource "aws_iam_role_policy" "elb_ec2_role_policy" {
           "logs:*",
           "ssm:*",
           "ec2messages:*",
-          "ecr:GetAuthorization",
+          "ecr:GetAuthorizationToken",
           "ecr:BatchCheckLayerAvailability",
           "ecr:GetDownloadUrlForLayer",
           "ecr:GetRepositoryPolicy",
           "ecr:DescribeRepositories",
           "ecr:ListImages",
+          "ecr:DescribeImages",
           "ecr:BatchGetImage",
-          "s3:*",
+          "s3:*"
         ]
         Effect   = "Allow"
         Resource = "*"
