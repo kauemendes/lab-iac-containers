@@ -18,7 +18,7 @@ resource "aws_iam_role" "elb_ec2_role" {
   })
 
   tags = {
-    app_name = "kauecode-iac-containers"
+    app_name   = "kauecode-iac-containers"
     managed-by = "terraform"
   }
 }
@@ -48,7 +48,7 @@ resource "aws_iam_role_policy" "elb_ec2_role_policy" {
           "ecr:DescribeRepositories",
           "ecr:ListImages",
           "ecr:BatchGetImage",
-          "s3:*",          
+          "s3:*",
         ]
         Effect   = "Allow"
         Resource = "*"
